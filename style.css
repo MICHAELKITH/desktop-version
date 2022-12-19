@@ -1,7 +1,24 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap";
+* {
+  --main-bg-color: #fff;
+  --header-text-color: #172b4d;
+  --normal-text-color: #344563;
+  --secondary-text-color: #6070ff;
+  --light-text-color: #7f8cff;
+  --main-font-family: 'Poppins', sans-serif;
+  --black-color: #000;
+  --background-active-button: #2230d2;
+  --button-disabled-text-color: #5e6c84;
+  --gray-background-color: #e5e5e5;
+  --gray--light-color: #f7f7f9;
+  --tag-background-color: #ebebff;
+  --button-color: #396df2;
+  --tag-color: #7a869a;
+  --footer-background: #6070ff;
+}
 
 /* animations */
-@keyframes resize {
+@keyframes expand {
   from {
     transform: scale(1.3);
   }
@@ -11,14 +28,14 @@
   }
 }
 
-@keyframes rotate {
+@keyframes my-move{
   from {
-    transform: rotate(0deg);
-  }
+    left: 0px;
+    }
 
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+    left: 20px;
+    }
 }
 
 @keyframes shownav {
@@ -46,9 +63,27 @@
 
 :root {
   --blue-color: #344563;
+  --main-bg-color: #fff;
+  --header-text-color: #172b4d;
+  --normal-text-color: #344563;
+  --secondary-text-color: #6070ff;
+  --light-text-color: #7f8cff;
+  --main-font-family: 'Poppins', sans-serif;
+  --detail-color: #71869a;
+  --black-color: #000;
+  --background-active-button: #2230d2;
+  --button-disabled-text-color: #5e6c84;
+  --gray-background-color: #e5e5e5;
+  --gray--light-color: #f7f7f9;
+  --tag-background-color: #ebebff;
+  --button-color: #396df2;
+  --tag-color: #7a869a;
+  --footer-background: #6070ff;
+  
 }
 
 /* images */
+
 .img1 {
   content: url("./images/Snapshoot Portfolio.png");
 }
@@ -85,6 +120,7 @@ li {
   width: 378px;
   margin: 0 auto;
   border: 1px solid gray;
+  background-color: var(--gray-background-color);
 }
 
 header {
@@ -92,6 +128,7 @@ header {
   height: 48px;
   top: 44px;
   padding: 3%;
+  background-color: var(--main-bg-color);
 }
 
 .navbar {
@@ -103,11 +140,11 @@ header {
 .logo {
   display: flex;
   align-self: flex-end;
-  animation: rotate 3s 1 linear 1s;
+  animation: my-move 3s 1 linear 1s;
 }
 
 img:hover {
-  transform: scale(1.2);
+  transform: scale(0.8);
 }
 
 .navbar-links {
@@ -124,11 +161,11 @@ h1 {
 }
 
 .paragraph-text {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
-  color: var(--blue-color);
+  color: var(--normal-text-color);
 }
 
 .intro,
@@ -138,6 +175,12 @@ h1 {
   padding-left: 5%;
   background-image: url(./images/header-shapes\ mobile.png);
   background-repeat: no-repeat;
+  background-color: var(--main-bg-color);
+
+}
+.about{
+  border-top-right-radius: 132px;
+  margin-top: 180px;
 }
 
 .social-link {
@@ -165,6 +208,7 @@ h1 {
   grid-template: repeat(4, 25%) / auto;
   padding: 15% 5%;
   gap: 50px;
+  
 }
 
 .card-item {
@@ -173,7 +217,7 @@ h1 {
   flex-direction: column;
   border: 1px solid #dfe1e6;
   border-radius: 16px;
-  background: white;
+  background-color: var(--main-bg-color);
   gap: 12px;
   width: 327px;
   padding: 16px;
@@ -200,7 +244,7 @@ h1 {
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
-  color: var(--blue-color);
+  color: var(--normal-text-color);
   text-transform: uppercase;
 }
 
@@ -209,7 +253,7 @@ h1 {
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
-  color: #71869a;
+  color: var(--detail-color);
 }
 
 .description {
@@ -217,7 +261,7 @@ h1 {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  color: var(--blue-color);
+  color: var(--normal-text-color);
 }
 
 .tags {
@@ -226,7 +270,7 @@ h1 {
   gap: 10px;
 }
 
-.RoR {
+.tag-images-1 {
   display: none;
 }
 
@@ -246,7 +290,25 @@ h1 {
   letter-spacing: 0.03em;
   color: #396df2;
   text-align: center;
-  transition: background 2s;
+  transition: width 2s, height 4s;
+}
+.more-button-1{
+  border: 1px solid #6070ff;
+  border-radius: 8px;
+  width: 128px;
+  height: 48px;
+  padding: 12px;
+  gap: 10px;
+  background-color: var(--button-color);
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--tag-background-color);
+  text-align: center;
+  transition: width 2s, height 4s;
 }
 
 .check-button {
@@ -282,7 +344,7 @@ h1 {
 }
 
 .skills > span > img:hover {
-  box-shadow: 2px 3px 5px 1px blue;
+  box-shadow: 8px 3px 4px 9px blue;
 }
 
 hr.solid {
@@ -361,12 +423,15 @@ button {
   width: 140px;
   height: 48px;
   border-radius: 10px;
-  background: white;
+  background-color: white;
   font-weight: 500;
   font-size: 17px;
   line-height: 24px;
   color: black;
   border: 1px solid#CFD8DC;
+}
+.submit{
+  transition: width 2s, height 4s;
 }
 
 .eclipse {
@@ -386,13 +451,21 @@ button {
 /* effects */
 .more-button:hover,
 .check-button:hover {
-  background: #6070ff;
-  color: white;
+  background-color: #6070ff;
+  color: var(--gray--light-color);
 }
+.more-button-1:hover{
+  background-color: var(--gray-background-color);
+  color: var(--black-color);
+}
+
 
 button:hover {
   background: black;
   color: white;
+  
+
+
 }
 
 button:disabled {
@@ -406,12 +479,13 @@ button:disabled {
 
 .navbar-links > li > a:hover {
   color: blue;
+  background-color: var(--gray-background-color);
 }
 
 .social-icon > a > img:hover {
   box-shadow: 1px 2px 4px 1px #5e6c84;
-  transform: scale(1.2);
-  transition: transform 1s;
+  transform: scale(2);
+  transition: transform 3s;
 }
 
 @media (min-width: 768px) {
@@ -435,14 +509,14 @@ button:disabled {
   .container {
     border: none;
     width: 100%;
-    background-color: #f4f5f7;
+    background-color: var(--main-bg-color);
   }
 
   header {
     width: 100%;
     position: fixed;
     top: -3vh;
-    background: white;
+    background-color: var(--main-bg-color);
     z-index: 1;
   }
 
@@ -453,7 +527,7 @@ button:disabled {
 
   .logo {
     align-self: center;
-    animation: rotate 5s 1 linear 2s, resize 5s 1 linear;
+    animation: rotate 5s 1 linear 2s, expand 5s 1 linear;
   }
 
   .bar {
@@ -472,12 +546,12 @@ button:disabled {
   }
 
   .intro {
-    margin-top: 5.5%;
+    margin-top: 6.0%;
     background: url(./images-portfolio-desktop/Header\ bg.png);
     background-size: contain;
     background-repeat: no-repeat;
     padding: 100px 80px;
-    background-color: white;
+    background-color: var(--main-bg-color);
     height: 100vh;
   }
 
@@ -570,7 +644,7 @@ button:disabled {
     margin-left: -6%;
   }
 
-  .RoR {
+  .tag-images-1 {
     display: inline-block;
   }
 
@@ -649,6 +723,8 @@ button:disabled {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 100px;
+    margin-bottom: 10px;
   }
 
   .personal-info > h1 {
