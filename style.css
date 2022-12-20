@@ -23,10 +23,12 @@
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 @keyframes expand {
   from {
     transform: scale(1.3);
@@ -150,6 +152,7 @@ header {
   align-self: flex-end;
   animation: my-move 3s 1 linear 1s;
 }
+
 .navbar-links {
   display: none;
 }
@@ -344,7 +347,6 @@ h1 {
 }
 
 .skills > span > img:hover {
-
   color: var();
   background-color: var(--light-text-color);
 }
@@ -459,19 +461,16 @@ button {
 }
 
 .more-button-1:hover {
-  background-color: var(--gray-background-color);
   color: var(--black-color);
   animation: glowing 20s linear infinite;
   opacity: 0;
   transition: opacity 9s ease-in-out;
   border-radius: 10px;
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-
+  background: linear-gradient(45deg, #f00, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #f00);
 }
 
-
 button:hover {
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(45deg, #f00, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #f00);
   opacity: 1;
   outline: 0;
   color: var(--black-color);
@@ -500,7 +499,7 @@ button:disabled {
   opacity: 0;
   transition: opacity 9s ease-in-out;
   border-radius: 10px;
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: linear-gradient(45deg, #f00, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #f00);
 }
 
 .social-icon > a > img:hover {
@@ -510,7 +509,7 @@ button:disabled {
   transition: transform 3s;
 }
 
- /* end */
+/* end */
 
 @media screen and (min-width: 768px) {
   /* images */
@@ -864,4 +863,3 @@ button:disabled {
     padding-bottom: 5%;
   }
 }
-
